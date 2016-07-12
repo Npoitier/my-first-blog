@@ -1,2 +1,2 @@
-git init
+python manage.py shell
 pause
