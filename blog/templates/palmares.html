@@ -7,7 +7,7 @@
     <body class="all">
 		<div class='header'><H1>Le palmarès de la grande boucle l'année de votre naissance</H1></div>
 	
-	{% if form.post.annee  %}
+	{% if form.post.annee != None %}
 		{% if form.post.commenttour != "" %}
 			<div class='Comment'>{{ form.post.commenttour }}</div>
 		{% endif %}
@@ -33,8 +33,14 @@
 			{% endif %} 
 		{% endif %} 
 	{% endif %}	 
+	
+	{% if form.post.annee == None  %}
+	<div><p>Entrez votre année de naissance</p></div>
+	{% else %}
+	<div><p>Choisissez une autre année entre 1903 et 2015</p></div>
+	{% endif %}
 
-<form action="/your-nametest/" method="post"  class="form" onsubmit='return confirmation()'>
+<form action="./" method="post"  class="form" onsubmit='return confirmation()'>
     {% csrf_token %}
     {{ form.as_p }}
     

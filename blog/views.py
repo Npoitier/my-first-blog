@@ -5,24 +5,15 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .forms import Selec
+from .forms import FormAnnee
 
-def post_list(request):
-    posts = Vainqueurtour.objects.all() #filter(published_date__lte=timezone.now()).order_by('published_date')
-    return redirect('blog.views.post_detail', pk=0) #render(request, 'blog/post_list.html', {'posts': posts})
+
 	
-def post_detail(request, pk):
-	try:
-		post = Vainqueurtour.objects.get(annee=pk) #post = get_object_or_404(Vainqueurtour, annee=pk)
-	except Vainqueurtour.DoesNotExist:
-		post = Vainqueurtour()
-	return render(request, 'blog/post_detail.html', {'post': post})
-	
-def get_name(request):
+def get_palmares(request):
 	# if this is a POST request we need to process the form data
 	if request.method == 'POST':
 	# create a form instance and populate it with data from the request:
-		form = Selec(request.POST)
+		form = FormAnnee(request.POST)
 		form['Anneeprec'].value=form['Annee'].value
 		form['CBVainqueurprec'].value=form['CBVainqueur'].value
 		form['CBgrimpeurprec'].value=form['CBgrimpeur'].value
@@ -35,11 +26,11 @@ def get_name(request):
 			
 			
 			form.post = Vainqueurtour.objects.get(annee=form['Annee'].value())
-			return render(request, 'name.html', {'form': form})
+			return render(request, 'palmares.html', {'form': form})
 
     # if a GET (or any other method) we'll create a blank form
 	else:
-		form = Selec()
-		test = 0
+		form = FormAnnee()
+		
 		form.post = Vainqueurtour()
-	return render(request, 'name.html', {'form': form})
+	return render(request, 'palmares.html', {'form': form})
