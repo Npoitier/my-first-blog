@@ -1,0 +1,278 @@
+h1 {  
+  font-family: Tahoma, Verdana, Segoe, sans-serif;  
+  font-size: 3em;
+  
+}
+
+h2 {  
+  font-family: Tahoma, Verdana, Segoe, sans-serif;  
+  font-size: 1.6em;
+}
+
+h3 {  
+  font-family: Tahoma, Verdana, Segoe, sans-serif;  
+  font-size: 1.2em;
+}
+
+p {  
+  font-family: Verdana, Geneva;  
+  font-size: 0.8em;
+}
+
+.all {  
+  font-family: Verdana, Geneva;  
+  padding-top: 0%;  
+  padding-right: 0%;  
+  padding-bottom: 0%;  
+  padding-left: 0%;  
+  margin-top: 0%;  
+  margin-right: 0%;  
+  margin-bottom: 0%;  
+  margin-left: 0%;
+  background-color: #DCE6F3;
+}
+.header {  
+  font-family: Verdana, Geneva;  
+  background-color: #DCE6F3;  
+  background-image: url("./Tour-de-France.jpg");  
+  background-repeat: no-repeat;  
+  background-attachment: scroll;  
+  background-position: 50% 50%;  
+  width: 100%;  
+  height: 30%;
+  vertical-align: center;
+}
+.header h1 {  
+	float: top;
+  color: #DCE6F3;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+  text-align: center;
+   max-width:1280px;
+   vertical-align: middle;
+  margin-left: auto;
+    margin-right: auto;
+}
+.Comment{
+	float: right;  
+  min-width: 150px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 25%;
+  background-color: #DCE6F3; 
+}
+.Vainqueur{
+	float: left;  
+  min-width: 50px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 71%;
+  background-color: #ffde59; 
+}
+.grimpeur{
+	float: left;  
+  min-width: 50px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 71%;
+  background-color: #fc2232; 
+}
+.sprinter{
+	float: left;  
+  min-width: 50px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 71%;
+  background-color: #a4cd71; 
+}
+.form{
+	float: left;  
+  min-width: 150px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 71%;
+}
+P
+{
+	float: left;  
+  min-width: 150px;  
+  margin-top: 1%;  
+  margin-left: 0%;  
+  padding-top: 0%;  
+  padding-right: 0%;  
+  padding-bottom: 0%;  
+  padding-left: 0%;  
+  margin-right: 1%;  
+  width: 100%;
+  font-size: 1.3em;
+}
+button
+{
+	float: left;  
+  min-width: 150px; 
+  padding-top: 0%;  
+  padding-right: 0%;  
+  padding-bottom: 0%;  
+  padding-left: 0%;   
+  width: 10%;
+  height:7%;
+  font-size: 1.7em;
+ 
+}
+input{	
+	width:3%;
+	height:3%;
+	font-size: 1.3em;
+}
+#id_Annee,#id_Anneeprec {	
+	width:11%;
+	height:5%;
+	min-height: 40px;
+	font-size: 1.3em;
+}
+
+
+@media screen and (max-width: 980px) {
+    html {
+        font-size: 2em;
+    }
+	h1 {  
+  font-family: Tahoma, Verdana, Segoe, sans-serif;  
+  font-size: 1.5em;  
+}
+.Comment{
+	float: left;  
+  min-width: 150px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 100%;
+  background-color: #DCE6F3; 
+  font-size: 1.5em;
+}
+.Vainqueur{
+	float: left;  
+  min-width: 50px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 100%;
+  background-color: #ffde59; 
+  font-size: 1.5em;
+}
+.grimpeur{
+	float: left;  
+  min-width: 50px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 100%;
+  background-color: #fc2232;
+font-size: 1.5em;  
+}
+.sprinter{
+	float: left;  
+  min-width: 50px;  
+  margin-top: 0%;  
+  margin-left: 0%;  
+  padding-top: 1%;  
+  padding-right: 1%;  
+  padding-bottom: 1%;  
+  padding-left: 1%;  
+  margin-right: 0%;  
+  width: 100%;
+  background-color: #a4cd71; 
+  font-size: 1.5em;
+}
+.form{
+	float: left;  
+  min-width: 150px;  
+  margin-top: 1%;  
+  margin-left: 0%;  
+  padding-top: 0%;  
+  padding-right: 0%;  
+  padding-bottom: 0%;  
+  padding-left: 0%;  
+  margin-right: 1%;  
+  width: 100%;
+}
+P
+{
+	float: left;  
+  min-width: 150px;  
+  margin-top: 1%;  
+  margin-left: 0%;  
+  padding-top: 0%;  
+  padding-right: 0%;  
+  padding-bottom: 0%;  
+  padding-left: 0%;  
+  margin-right: 1%;  
+  width: 100%;
+  font-size: 1.5em;
+}
+button
+{
+	float: left;  
+  min-width: 150px;  
+  margin-top: 1%;  
+  margin-left: 0%;  
+  padding-top: 0%;  
+  padding-right: 0%;  
+  padding-bottom: 0%;  
+  padding-left: 0%;  
+  margin-right: 1%;  
+  width: 100%;
+  height:10%;
+  font-size: 2em;
+}
+input{
+	
+	width:10%;
+	height:5%;
+	font-size: 2em;
+}
+#id_Annee{
+	
+	width:25%;
+	height:7%;
+	min-height: 50px;
+	font-size: 1em;
+}
+}
+

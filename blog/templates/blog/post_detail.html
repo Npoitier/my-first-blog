@@ -6,10 +6,8 @@
     </head>
     <body class="all">
 		<div class='header'><H1>Le palmarès de la grande boucle l'année de votre naissance</H1></div>
-        <div>
-          {% for post in posts %}
-    <div>
-		
+
+	{% if post.annee  %}
 		{% if post.commenttour != "" %}
 		<div class='Comment'>{{ post.commenttour }}</div>
 		{% endif %}
@@ -18,21 +16,22 @@
 		{% else %}
 		 <div class='Vainqueur'>Le vainqueur est {{ post.vainqueur }}</div>
 		{% endif %}
+		{% if post.grimpeur  %}
 		{% if post.grimpeur == "" %}
 			<div class='grimpeur'>Pas de meilleur grimpeur</div>
 		{% else %}
 		 <div class='grimpeur'>Le meilleur grimpeur est {{ post.grimpeur }}</div>
 		 {% endif %}
-		 {% if post.grimpeur == "" %}
+		 {% endif %}
+		 {% if post.sprinter  %}
+		 {% if post.sprinter == "" %}
 			<div class='sprinter'>Pas de meilleur sprinter</div>
 		{% else %}
 		 <div class='sprinter'>Le meilleur sprinter est {{ post.sprinter }}</div>
 		 {% endif %} 
-        <p>publié: {{ post.annee }}</p>
-        <h1><a href="{% url 'post_detail' pk=post.annee %}">{{ post.vainqueur }}</a></h1>
+		 {% endif %} 
+	{% endif %}	 
+
         
-    </div>
-{% endfor %}
-        </div>
     </body>
 </html>

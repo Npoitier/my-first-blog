@@ -1,0 +1,66 @@
+﻿{% load staticfiles %}
+<html>
+    <head>
+		<title>Vainqueurs Tour de France</title>
+		<link rel="stylesheet" href="{% static 'css/TourdeFrance-v2.css' %}">        
+    </head>
+    <body class="all">
+		<div class='header'><H1>Le palmarès de la grande boucle l'année de votre naissance</H1></div>
+	
+	{% if form.post.annee  %}
+		{% if form.post.commenttour != "" %}
+			<div class='Comment'>{{ form.post.commenttour }}</div>
+		{% endif %}
+		{% if form.CBVainqueur.value  %}
+			{% if form.post.vainqueur == "" %}
+				<div class='Vainqueur'>Pas de vainqueur</div>
+			{% else %}
+				<div class='Vainqueur'>Le vainqueur est {{ form.post.vainqueur }}</div>
+			{% endif %}
+		{% endif %}
+		{% if form.CBgrimpeur.value  %}
+			{% if form.post.grimpeur == "" %}
+				<div class='grimpeur'>Pas de meilleur grimpeur</div>
+			{% else %}
+				<div class='grimpeur'>Le meilleur grimpeur est {{ form.post.grimpeur }}</div>
+			{% endif %}
+		{% endif %}
+		{% if form.CBsprinter.value  %}
+			{% if form.post.sprinter == "" %}
+				<div class='sprinter'>Pas de meilleur sprinter</div>
+			{% else %}
+				<div class='sprinter'>Le meilleur sprinter est {{ form.post.sprinter }}</div>
+			{% endif %} 
+		{% endif %} 
+	{% endif %}	 
+
+<form action="/your-nametest/" method="post"  class="form" onsubmit='return confirmation()'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+	<div class='button'> <button type='submit' value="Submit">Afficher</button></div>
+</form>
+
+<script type='text/javascript'>
+function confirmation()
+{
+	var reponse1 = document.getElementById('id_Annee');	
+	var CBVainqueurprec = (document.getElementById('id_CBVainqueurprec')=='checked');
+	var CBgrimpeurprec = (document.getElementById('id_CBgrimpeurprec')=='checked');
+	var CBsprinterprec = (document.getElementById('id_CBsprinterprec')=='checked');
+	if ( reponse1.value == null || reponse1.value ==0 ) reponse1.value =1903;
+	if ( ! document.getElementById('id_CBVainqueur').checked 
+	&& ! document.getElementById('id_CBgrimpeur').checked 
+	&& ! document.getElementById('id_CBsprinter').checked 	
+	) document.getElementById('id_CBVainqueur').checked =true ;
+	if(document.getElementById('id_Anneeprec').value!=0
+	&& document.getElementById('id_Anneeprec').value==reponse1.value
+	&& CBVainqueurprec==document.getElementById('id_CBVainqueur').checked
+	&& CBgrimpeurprec==document.getElementById('id_CBgrimpeur').checked
+	&&CBsprinterprec==document.getElementById('id_CBsprinter').checked){return false;} 
+	
+}
+
+</script>
+ </body>
+</html>
